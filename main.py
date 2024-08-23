@@ -28,7 +28,7 @@ for result in results.get('files'):
         while done is False:
             status, done = downloader.next_chunk()
         service.files().delete(fileId=file_id).execute()
-"""async def send_message(app):
+async def send_message(app):
         await app.send_message("yak8vlev", "сап")
 apps = [Client("my_account")]
 async def main():
@@ -36,4 +36,4 @@ async def main():
                 await app.send_message("yak8vlev", "сап")
 
 for app in apps:
-        app.run(main())"""
+        app.run(main())
