@@ -9,7 +9,7 @@ import io
 pp = pprint.PrettyPrinter(indent=4)
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
-SERVICE_ACCOUNT_FILE = 'mindful-furnace-433013-p9-faafd585a99f.json'
+SERVICE_ACCOUNT_FILE = 'xxxxxxxxxxxxxxxxxxxxxxxxx.json'
 credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 service = build('drive', 'v3', credentials=credentials)
@@ -30,7 +30,7 @@ for result in results.get('files'):
         service.files().delete(fileId=file_id).execute()
 """async def send_message(app):
         await app.send_message("yak8vlev", "сап")
-apps = []
+apps = [Client("my_account")]
 async def main():
         async with app:
                 await app.send_message("yak8vlev", "сап")
